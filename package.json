@@ -12,7 +12,16 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
-    "eslint": "^8.43.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.15.1",
     "nuxt": "^3.6.1"
+  },
+  "dependencies": {
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "nuxi": "^3.6.1"
   }
 }
