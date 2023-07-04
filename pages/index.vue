@@ -1,3 +1,12 @@
 <template>
-    <div><h1>Home</h1></div>
+    <div class="bg-white p-4 shadow">
+        <Navbar/>
+        <h1 class="text-2xl font-bold">Home</h1>
+    </div>
 </template>
+
+<script lang="ts">
+export default {
+    layout: 'default',
+}
+</script>
