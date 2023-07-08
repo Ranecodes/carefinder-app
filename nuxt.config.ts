@@ -3,4 +3,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [ '@nuxtjs/eslint-module', '@nuxtjs/tailwindcss' ],
+  css: ['~/assets/css/poppins.css']
   })
