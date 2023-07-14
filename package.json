@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@nuxtjs/eslint-module": "^4.1.0",
-    "nuxi": "^3.6.1"
+    "nuxi": "^3.6.1",
+    "swiper": "^10.0.4"
   }
 }

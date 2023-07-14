@@ -178,6 +178,10 @@
       </div>
     </div>
   </div>
+  <div class="mid-btm-section">
+    
+    <SwipeFeature />
+  </div>
 </template>
 
 <script lang="ts">
