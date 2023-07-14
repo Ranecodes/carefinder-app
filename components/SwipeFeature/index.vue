@@ -1,6 +1,5 @@
 <template>
   <div class="swiper-container">
-    <h1>Texting out the slider</h1>
     <Swiper
       class="swiper"
       :spaceBetween="30"
@@ -19,10 +18,13 @@
         <img src="~/assets/images/full-scr-1.png" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="~/assets/images/full-scr-1.png" alt="" />
+        <img src="~/assets/images/full-scr-2.png" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="~/assets/images/full-scr-1.png" alt="" />
+        <img src="~/assets/images/full-scr-3.png" alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="~/assets/images/full-scr-4.png" alt="" />
       </SwiperSlide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>

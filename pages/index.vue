@@ -179,7 +179,6 @@
     </div>
   </div>
   <div class="mid-btm-section">
-    
     <SwipeFeature />
   </div>
 </template>
@@ -208,7 +207,7 @@ export default {
 
 .features-section {
   font-family: "Poppins", sans-serif;
-  @apply flex flex-col justify-center pt-[113px] pb-[270px];
+  @apply flex flex-col justify-center pt-[113px] pb-[150px];
 }
 
 .feature-card {
