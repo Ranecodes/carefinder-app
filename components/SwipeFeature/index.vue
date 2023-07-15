@@ -15,10 +15,10 @@
       }"
     >
       <SwiperSlide>
-        <nuxt-img loading="lazy" src="full-scr-1.png" alt="doctor and patient smiling" />
+        <nuxt-img  src="full-scr-1.png" alt="doctor and patient smiling" />
       </SwiperSlide>
       <SwiperSlide>
-        <nuxt-img loading="lazy" src="full-scr-2.png" alt="surgeon" />
+        <nuxt-img  src="full-scr-2.png" alt="surgeon" />
       </SwiperSlide>
       <SwiperSlide>
         <nuxt-img loading="lazy" src="full-scr-3.png" alt=""/>
