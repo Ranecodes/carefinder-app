@@ -85,6 +85,9 @@
       View All Hospitals
     </button>
   </div>
+  <div class="mid-btm-section pt-[141px]">
+    <SwipeFeature />
+  </div>
   <div class="features-section">
     <h1 class="text-[48px] font-bold text-center pb-[49px] text-[#000000cc]">
       Features
@@ -173,9 +176,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="mid-btm-section">
-    <SwipeFeature />
   </div>
 </template>
 
