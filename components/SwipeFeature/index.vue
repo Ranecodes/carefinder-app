@@ -15,16 +15,16 @@
       }"
     >
       <SwiperSlide>
-        <img src="~/assets/images/full-scr-1.png" alt="" />
+        <nuxt-img loading="lazy" src="full-scr-1.png" alt="doctor and patient smiling" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="~/assets/images/full-scr-2.png" alt="" />
+        <nuxt-img loading="lazy" src="full-scr-2.png" alt="surgeon" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="~/assets/images/full-scr-3.png" alt="" />
+        <nuxt-img loading="lazy" src="full-scr-3.png" alt=""/>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="~/assets/images/full-scr-4.png" alt="" />
+        <nuxt-img loading="lazy" src="full-scr-4.png" alt="" />
       </SwiperSlide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>

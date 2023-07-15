@@ -5,7 +5,7 @@
       at your service
     </div>
     <div class="hero-section-image">
-      <nuxt-img class="h-auto w-11/12" src="heroimage1.png" alt="surgeon operating"/>
+      <nuxt-img class="h-auto w-11/12"  src="heroimage1.png" alt="surgeon operating"/>
     </div>
   </div>
   <div class="search-form-wrapper">
