@@ -127,6 +127,7 @@
             Search for hospitals near <br />
             you.
           </p>
+          <button class="feat-btn">Search Now</button>
         </div>
       </div>
       <div class="feature-card pl-[65px] pb-4">
@@ -151,6 +152,7 @@
             Ability to export list of <br />
             hospitals near you in a csv file
           </p>
+          <button class="feat-btn">Check it out</button>
         </div>
       </div>
       <div class="feature-card pl-[58px]">
@@ -173,6 +175,7 @@
             Edit and add hospitals to <br />
             the current database
           </p>
+          <button class="feat-btn">Contribute</button>
         </div>
       </div>
     </div>
@@ -209,5 +212,9 @@ export default {
 .feature-card {
   font-family: "Poppins", sans-serif;
   @apply flex;
+}
+
+.feat-btn{
+  @apply bg-[#00BABA] px-[26px] py-[11px] rounded-[3px] text-[#ffffff] mt-5 hover:bg-[#4FCFCF];
 }
 </style>
