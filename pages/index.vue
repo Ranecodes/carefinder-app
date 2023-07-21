@@ -1,4 +1,4 @@
-<template>
+<template class="container">
   <div class="hero-section relative bg-white p-4 flex pt-[89px]">
     <div class="hero-section-text pl-[102px] pt-[60px]">
       Our <span class="text-[#001FC0]">expertise</span> <br />
@@ -180,6 +180,12 @@
       </div>
     </div>
   </div>
+  <div class="testimonial-section">
+    <h1 class="text-[48px] font-bold text-center pb-[49px] text-[#000000cc]">
+      Testimonials
+    </h1>
+    <Testimonials />
+  </div>
 </template>
 
 <script lang="ts">
@@ -189,6 +195,11 @@ export default {
 </script>
 
 <style>
+.container {
+  font-family: "Poppins", sans-serif;
+ 
+}
+
 .hero-section-text {
   font-family: "Poppins", sans-serif;
   @apply text-6xl pr-[20px] font-bold leading-normal;
@@ -216,5 +227,9 @@ export default {
 
 .feat-btn{
   @apply bg-[#00BABA] px-[26px] py-[11px] rounded-[3px] text-[#ffffff] mt-5 hover:bg-[#4FCFCF];
+}
+
+.testimonial-section{
+  font-family: "Poppins", sans-serif;
 }
 </style>
