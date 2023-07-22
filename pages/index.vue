@@ -259,7 +259,7 @@ export default {
 
 .newsletter-section{
   font-family: "Poppins", sans-serif;
-  @apply flex flex-col justify-center items-center pt-[113px] pb-[150px];
+  @apply flex flex-col justify-center items-center pt-[113px] pb-[70px];
 }
 
 
