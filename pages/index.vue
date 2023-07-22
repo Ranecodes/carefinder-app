@@ -186,6 +186,30 @@
     </h1>
     <Testimonials />
   </div>
+  <div class="newsletter-section">
+    <div class="newsletter-text">
+      <h1 class="text-[40px] font-semibold pb-[21px]">Subscribe to Newsletter</h1>
+      <p class="text-center text-[26px] text-[#B8B8B8] pb-[73px]">Unlock Your Healthcare Journey</p>
+    </div>
+    <div class="newsletter-form-wr pb-[186px]">
+      <form action="">
+        <input
+          type="text"
+          class="border rounded-[3px] pr-3 pl-[22px] py-[13px] w-[426px] bg-[#F4F4F4] text-[20px]"
+          placeholder="Enter your email"
+        />
+        <button
+          type="submit"
+          class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px] text-[20px]"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-section">
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts">
@@ -232,4 +256,11 @@ export default {
 .testimonial-section{
   font-family: "Poppins", sans-serif;
 }
+
+.newsletter-section{
+  font-family: "Poppins", sans-serif;
+  @apply flex flex-col justify-center items-center pt-[113px] pb-[150px];
+}
+
+
 </style>
