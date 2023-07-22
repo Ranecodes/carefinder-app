@@ -1,7 +1,7 @@
 <template>
   <div class="swiper-container">
     <Swiper
-      class="swiper"
+      class="swipers"
       :navigation="true"
       :slidesPerView="3"
       :spaceBetween="30"
@@ -285,8 +285,8 @@ export default {
 </script>
 
 <style>
-.swiper {
-  @apply m-10 font-[14px] h-[530px];
+.swipers {
+  @apply  m-10 font-[14px] h-[530px];
 }
 
 
