@@ -80,7 +80,7 @@
     </div>
     <button
       type="submit"
-      class="view-btn px-[26px] py-[12px] bg-[#00BABA] rounded-[3px] text-[#ffff]"
+      class="view-btn px-[26px] py-[12px] bg-[#00BABA] rounded-[3px] text-[#ffff] hover:bg-[#4FCFCF]"
     >
       View All Hospitals
     </button>
@@ -88,7 +88,7 @@
   <div class="mid-btm-section pt-[141px]">
     <SwipeFeature />
   </div>
-  <div class="features-section">
+  <div class="features-section" id="features">
     <h1 class="text-[48px] font-bold text-center pb-[49px] text-[#000000cc]">
       Features
     </h1>
@@ -180,8 +180,8 @@
       </div>
     </div>
   </div>
-  <div class="testimonial-section">
-    <h1 class="text-[48px] font-bold text-center pb-[49px] text-[#000000cc]">
+  <div class="testimonial-section" id="testimonials">
+    <h1 class="text-[48px] font-bold text-center pb-[35px] text-[#000000cc]">
       Testimonials
     </h1>
     <Testimonials />
@@ -207,7 +207,7 @@
       </form>
     </div>
   </div>
-  <div class="footer-section">
+  <div class="footer-section" id="contact">
     <Footer />
   </div>
 </template>
@@ -241,7 +241,7 @@ export default {
 
 .features-section {
   font-family: "Poppins", sans-serif;
-  @apply flex flex-col justify-center pt-[113px] pb-[150px];
+  @apply flex flex-col justify-center pt-[113px] pb-[210px];
 }
 
 .feature-card {

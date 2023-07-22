@@ -4,7 +4,7 @@
     <div class="footer-content p-[100px]">
       <div class="sm-links">
         <nuxt-img src="Logo.png" alt="logo" />
-        <div class="sm-icons flex">
+        <div class="sm-icons flex cursor-pointer">
           <svg
             width="41"
             height="41"
@@ -159,12 +159,19 @@ export default {
   @apply flex flex-col justify-center items-center;
 }
 
+.sm-icons svg:hover{
+  @apply brightness-110;
+}
+
 .links{
     @apply mr-[250px] pb-[25px];
 }
 
 .link a{
     @apply  text-[14px];
+}
+.link a:hover{
+    @apply text-[#001FC0];
 }
 .footer-bottom{
   @apply flex justify-between pb-10 text-[14px];

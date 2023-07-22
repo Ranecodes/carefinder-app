@@ -5,9 +5,9 @@
       </div>
       <ul class="nav-list  flex items-center space-x-4 text-base text-[#767676] ">
         <div class="mid-nav flex space-x-16 pr-64 font-semibold ">
-          <NavItem class="nav blue-text text-[#001FC0] " link="/about">About Us</NavItem>
-          <NavItem class="nav " link="/pricing">Pricing</NavItem>
-          <NavItem class="nav " link="/contact">Contact Us</NavItem>
+          <NavItem class="nav blue-text text-[#001FC0] " link="/#features">Features</NavItem>
+          <NavItem class="nav " link="/#testimonials">Testimonials</NavItem>
+          <NavItem class="nav " link="/#contact">Contact Us</NavItem>
         </div>
         <div class="end-nav flex items-center space-x-7 pr-24 font-bold">
           <NavItem class="hover:text-[#001FC0]" link="/admin/login">Login</NavItem>
