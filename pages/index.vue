@@ -243,7 +243,7 @@ export default {
 
 .search-form {
   font-family: "Poppins", sans-serif;
-  @apply py-6 px-[63px] left-[121px] bottom-[-135px] z-0 backdrop-blur-sm;
+  @apply py-6 px-[63px] left-[121px] bottom-[-190px] z-0 backdrop-blur-sm;
 }
 
 .view-btn {
