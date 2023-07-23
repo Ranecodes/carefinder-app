@@ -5,7 +5,11 @@
       at your service
     </div>
     <div class="hero-section-image">
-      <nuxt-img class="h-auto w-11/12"  src="heroimage1.png" alt="surgeon operating"/>
+      <nuxt-img
+        class="h-auto w-11/12"
+        src="heroimage1.png"
+        alt="surgeon operating"
+      />
     </div>
   </div>
   <div class="search-form-wrapper">
@@ -188,8 +192,12 @@
   </div>
   <div class="newsletter-section">
     <div class="newsletter-text">
-      <h1 class="text-[40px] font-semibold pb-[21px]">Subscribe to Newsletter</h1>
-      <p class="text-center text-[26px] text-[#B8B8B8] pb-[73px]">Unlock Your Healthcare Journey</p>
+      <h1 class="text-[40px] font-semibold pb-[21px]">
+        Subscribe to Newsletter
+      </h1>
+      <p class="text-center text-[26px] text-[#B8B8B8] pb-[73px]">
+        Unlock Your Healthcare Journey
+      </p>
     </div>
     <div class="newsletter-form-wr pb-[186px]">
       <form action="">
@@ -213,15 +221,19 @@
 </template>
 
 <script lang="ts">
+import { ref } from "vue";
+
+
+
 export default {
   layout: "default",
+ 
 };
 </script>
 
 <style>
 .container {
   font-family: "Poppins", sans-serif;
- 
 }
 
 .hero-section-text {
@@ -249,18 +261,16 @@ export default {
   @apply flex;
 }
 
-.feat-btn{
+.feat-btn {
   @apply bg-[#00BABA] px-[26px] py-[11px] rounded-[3px] text-[#ffffff] mt-5 hover:bg-[#4FCFCF];
 }
 
-.testimonial-section{
+.testimonial-section {
   font-family: "Poppins", sans-serif;
 }
 
-.newsletter-section{
+.newsletter-section {
   font-family: "Poppins", sans-serif;
   @apply flex flex-col justify-center items-center pt-[113px] pb-[70px];
 }
-
-
 </style>

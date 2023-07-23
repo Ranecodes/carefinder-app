@@ -11,14 +11,16 @@
         </div>
         <div class="end-nav flex items-center space-x-7 pr-24 font-bold">
           <NavItem class="hover:text-[#001FC0]" link="/admin/login">Login</NavItem>
-          <NavItem link="/admin/signup" class="btn-blue cursor-pointer ">Sign Up</NavItem>
+          <NavItem class="btn-blue cursor-pointer " @click="$emit('openSignUpModal')" >Sign Up</NavItem>
         </div>
+
       </ul>
     </nav>
 </template>
   
 <script setup>
-  import NavItem from './NavItem.vue';
+import NavItem from './NavItem.vue';
+
 </script>
   
 <style scoped>
