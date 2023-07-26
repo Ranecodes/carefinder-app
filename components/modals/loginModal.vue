@@ -206,22 +206,26 @@
         <div class="text-center">
           <p>
             Don't have an account yet?
-            <a class="text-[#001FC0] font-bold" href="#" @click="$emit('openSignUpModal')" >Sign Up</a>
+            <a class="text-[#001FC0] font-bold" @click="openSignUpModal">Sign Up</a>
           </p>
         </div>
       </form>
     </div>
   </div>
-
+  <SignUpModal v-if="showModalSignUp" @close="showModalSignUp = false" />
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-
+import SignUpModal from "./signUpModal.vue";
 
 const email = ref("");
 const password = ref("");
+const showModalSignUp = ref(false);
 
+const openSignUpModal = () => {
+  showModalSignUp.value = true;
+};
 
 function submitForm() {
   console.log({

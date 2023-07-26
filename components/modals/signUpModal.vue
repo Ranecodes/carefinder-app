@@ -196,20 +196,27 @@
         <div class="text-center">
           <p>
             Already have an account?
-            <a class="text-[#001FC0] font-bold" href="#" @click="$emit('openLoginModal')" >Log in</a>
+            <a class="text-[#001FC0] font-bold" href="#" @click="openLoginModal" >Log in</a>
           </p>
         </div>
       </form>
     </div>
   </div>
+  <LoginModal v-if="showModalLogin" @close="showModalLogin = false" />
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import LoginModal from "./loginModal.vue";
 
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
+const showModalLogin = ref(false);
+
+const openLoginModal = () => {
+  showModalLogin.value = true;
+};
 
 function submitForm() {
   console.log({
