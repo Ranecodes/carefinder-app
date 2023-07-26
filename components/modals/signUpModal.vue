@@ -196,7 +196,7 @@
         <div class="text-center">
           <p>
             Already have an account?
-            <a class="text-[#001FC0] font-bold" href="#">Log in</a>
+            <a class="text-[#001FC0] font-bold" href="#" @click="$emit('openLoginModal')" >Log in</a>
           </p>
         </div>
       </form>

@@ -4,8 +4,8 @@
       <form @submit.prevent="submitForm">
         <div class="form-top">
           <svg
-            width="45"
-            height="45"
+            width="50"
+            height="50"
             viewBox="0 0 65 66"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -98,25 +98,19 @@
           </svg>
 
           <button class="close-button" @click="$emit('close')">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 384 512"
-            >
-              <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-              />
-            </svg>
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.6714 32.3307L22.502 22.5001L32.3326 32.3307M32.3326 12.6694L22.5001 22.5001L12.6714 12.6694" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
           </button>
         </div>
-        <div class="form-text">
-          <h1>Welcome back!</h1>
-          <p>Please enter your details</p>
+        <div class="form-text text-center">
+          <h1 class="text-[20px] font-bold">Welcome back!</h1>
+          <p class="text-[14px] text-[#A5A5A5] pt-[10px]">Please enter your details</p>
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" v-model="email" required />
+          <input type="email" id="email" v-model="email" placeholder="Enter your email" required />
         </div>
         <div class="form-group relative">
           <label for="password">Password:</label>
@@ -211,17 +205,19 @@
         </div>
         <div class="text-center">
           <p>
-            Already have an account?
-            <a class="text-[#001FC0] font-bold" href="#">Log in</a>
+            Don't have an account yet?
+            <a class="text-[#001FC0] font-bold" href="#" @click="$emit('openSignUpModal')" >Sign Up</a>
           </p>
         </div>
       </form>
     </div>
   </div>
+
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+
 
 const email = ref("");
 const password = ref("");
