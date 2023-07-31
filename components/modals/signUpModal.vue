@@ -1,7 +1,7 @@
 <template>
   <div class="modal-overlay">
     <div class="modal-content">
-      <form @submit.prevent="submitForm">
+      <form @submit.prevent="signUp">
         <div class="form-top">
           <svg
             width="50"
@@ -242,10 +242,11 @@
 import { ref } from "vue";
 import LoginModal from "./loginModal.vue";
 
-
+const client = useSupabaseAuthClient();
 const email = ref("");
 const password = ref("");
-const confirmPassword = ref("");
+const errorMsg = ref("");
+const successMsg = ref("");
 const showModalLogin = ref(false);
 
 
@@ -253,14 +254,19 @@ const openLoginModal = () => {
   showModalLogin.value = true;
 };
 
-function submitForm() {
-  console.log({
-    email: email.value,
-    password: password.value,
-    confirmPassword: confirmPassword.value,
-  });
-}
-
+async function signUp() {
+  try{
+    const{data, error} = await client.auth.signUp({
+      email: email.value,
+      password: password.value,
+    });
+    if (error) throw error;
+    successMsg.value = "Check your email for confirmation";
+    }
+    catch (error) {
+      errorMsg.value = "Error signing up";
+    }
+  }
 </script>
 
 <style>

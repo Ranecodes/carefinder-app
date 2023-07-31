@@ -11,7 +11,7 @@
         </div>
         <div class="end-nav flex items-center space-x-7 pr-24 font-bold">
           <NavItem class="hover:text-[#001FC0] cursor-pointer" @click="$emit('openLoginModal')" >Login</NavItem>
-          <NavItem class="btn-blue cursor-pointer " @click="$emit('openSignUpModal')" >Sign Up</NavItem>
+          <NavItem  class="btn-blue cursor-pointer " @click="$emit('openSignUpModal')" >Sign Up</NavItem>
         </div>
 
       </ul>

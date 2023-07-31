@@ -78,7 +78,7 @@
           type="submit"
           class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]"
         >
-        <NavItem link="/search">Search</NavItem>
+        <NavItem link="/search" class="list-none">Search</NavItem>
         </button>
       </form>
     </div>

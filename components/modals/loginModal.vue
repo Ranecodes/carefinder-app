@@ -1,7 +1,7 @@
 <template>
   <div class="modal-overlay">
     <div class="modal-content">
-      <form @submit.prevent="submitForm">
+      <form @submit.prevent="signIn">
         <div class="form-top">
           <svg
             width="50"
@@ -240,21 +240,29 @@
 import { ref } from "vue";
 import SignUpModal from "./signUpModal.vue";
 
+const client = useSupabaseAuthClient();
+const router = useRouter();
 
 const email = ref("");
 const password = ref("");
+const errorMsg = ref("");
 const showModalSignUp = ref(false);
 
 const openSignUpModal = () => {
   showModalSignUp.value = true;
 };
 
-function submitForm() {
-  console.log({
-    email: email.value,
-    password: password.value,
-
-  });
+async function signIn() {
+  try {
+    const {error} = await client.auth.signInWithPassword({
+      email: email.value,
+      password: password.value,
+    });
+    if (error) throw error;
+    router.push("/admin/dashboard");
+  } catch (error) {
+    errorMsg.value = "Incorrect email or password";
+  }
 }
 </script>
 
