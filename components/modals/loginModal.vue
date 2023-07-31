@@ -98,19 +98,38 @@
           </svg>
 
           <button class="close-button" @click="$emit('close')">
-            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.6714 32.3307L22.502 22.5001L32.3326 32.3307M32.3326 12.6694L22.5001 22.5001L12.6714 12.6694" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6714 32.3307L22.502 22.5001L32.3326 32.3307M32.3326 12.6694L22.5001 22.5001L12.6714 12.6694"
+                stroke="#111111"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </div>
         <div class="form-text text-center">
           <h1 class="text-[20px] font-bold">Welcome back!</h1>
-          <p class="text-[14px] text-[#A5A5A5] pt-[10px]">Please enter your details</p>
+          <p class="text-[14px] text-[#A5A5A5] pt-[10px]">
+            Please enter your details
+          </p>
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" v-model="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            id="email"
+            v-model="email"
+            placeholder="Enter your email"
+            required
+          />
         </div>
         <div class="form-group relative">
           <label for="password">Password:</label>
@@ -160,7 +179,7 @@
             class="signup-btn signup-btn-1 bg-[#1836B2] text-white"
             type="submit"
           >
-            Create account
+            Log in
           </button>
           <div class="google-signup flex items-center">
             <button
@@ -206,7 +225,9 @@
         <div class="text-center">
           <p>
             Don't have an account yet?
-            <a class="text-[#001FC0] font-bold" @click="openSignUpModal">Sign Up</a>
+            <a class="text-[#001FC0] font-bold" @click="openSignUpModal"
+              >Sign Up</a
+            >
           </p>
         </div>
       </form>
@@ -218,6 +239,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import SignUpModal from "./signUpModal.vue";
+
 
 const email = ref("");
 const password = ref("");
@@ -231,7 +253,7 @@ function submitForm() {
   console.log({
     email: email.value,
     password: password.value,
-    
+
   });
 }
 </script>
@@ -246,11 +268,11 @@ function submitForm() {
   @apply bg-white p-8 rounded-[3px] w-[470px] relative;
 }
 
-.form-top{
+.form-top {
   @apply flex justify-between items-center mb-[10px];
 }
 
-.form-group{
+.form-group {
   @apply pb-[10px] text-[15px];
 }
 
@@ -258,15 +280,15 @@ function submitForm() {
   @apply w-full px-[11px] py-[12px] border border-[1px] border-solid border-[#D2D3D3];
 }
 
-.signup-btn{
+.signup-btn {
   @apply w-full  py-[14px] mb-4;
 }
 
-.signup-btn-1:active{
-  @apply bg-[#6C6A6A] ;
+.signup-btn-1:active {
+  @apply bg-[#6C6A6A];
 }
 
-.signup-btn-2:active{
-  @apply border-[2px] border-solid border-[#6C6A6A] ;
+.signup-btn-2:active {
+  @apply border-[2px] border-solid border-[#6C6A6A];
 }
 </style>

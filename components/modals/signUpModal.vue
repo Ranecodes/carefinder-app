@@ -98,10 +98,21 @@
           </svg>
 
           <button class="close-button" @click="$emit('close')">
-            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.6714 32.3307L22.502 22.5001L32.3326 32.3307M32.3326 12.6694L22.5001 22.5001L12.6714 12.6694" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6714 32.3307L22.502 22.5001L32.3326 32.3307M32.3326 12.6694L22.5001 22.5001L12.6714 12.6694"
+                stroke="#111111"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </div>
         <div class="form-text text-center">
@@ -114,13 +125,19 @@
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" v-model="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            id="email"
+            v-model="email"
+            placeholder="Enter your email"
+            required
+          />
         </div>
         <div class="form-group relative">
           <label for="password">Password:</label>
           <div class="input">
             <svg
-            class="absolute top-[50%] right-[10px] cursor-pointer"
+              class="absolute top-[50%] right-[10px] cursor-pointer"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -149,16 +166,29 @@
                 </clipPath>
               </defs>
             </svg>
-            <input type="password" id="password" v-model="password" placeholder="Enter your password" required />
+            <input
+              type="password"
+              id="password"
+              v-model="password"
+              placeholder="Enter your password"
+              required
+            />
           </div>
         </div>
-        
+
         <div class="form-group">
-          <button class="signup-btn signup-btn-1 bg-[#1836B2] text-white" type="submit">Create account</button>
+          <button
+            class="signup-btn signup-btn-1 bg-[#1836B2] text-white"
+            type="submit"
+          >
+            Create account
+          </button>
           <div class="google-signup flex items-center">
-            <button class="signup-btn signup-btn-2 flex items-center justify-center text-[#363939] border-[#1836B2] border-solid border-[1px]">
+            <button
+              class="signup-btn signup-btn-2 flex items-center justify-center text-[#363939] border-[#1836B2] border-solid border-[1px]"
+            >
               <svg
-              class="mr-[10px]"
+                class="mr-[10px]"
                 width="22"
                 height="22"
                 viewBox="0 0 22 22"
@@ -189,14 +219,17 @@
                     <rect width="22" height="22" rx="5" fill="white" />
                   </clipPath>
                 </defs>
-              </svg> Sign up with Google
+              </svg>
+              Sign up with Google
             </button>
           </div>
         </div>
         <div class="text-center">
           <p>
             Already have an account?
-            <a class="text-[#001FC0] font-bold" href="#" @click="openLoginModal" >Log in</a>
+            <a class="text-[#001FC0] font-bold" href="#" @click="openLoginModal"
+              >Log in</a
+            >
           </p>
         </div>
       </form>
@@ -209,10 +242,12 @@
 import { ref } from "vue";
 import LoginModal from "./loginModal.vue";
 
+
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 const showModalLogin = ref(false);
+
 
 const openLoginModal = () => {
   showModalLogin.value = true;
@@ -225,6 +260,7 @@ function submitForm() {
     confirmPassword: confirmPassword.value,
   });
 }
+
 </script>
 
 <style>
@@ -237,11 +273,11 @@ function submitForm() {
   @apply bg-white p-8 rounded-[3px] w-[470px] relative;
 }
 
-.form-top{
+.form-top {
   @apply flex justify-between items-center mb-[10px];
 }
 
-.form-group{
+.form-group {
   @apply pb-[10px] text-[15px];
 }
 
@@ -249,15 +285,15 @@ function submitForm() {
   @apply w-full px-[11px] py-[12px] border border-[1px] border-solid border-[#D2D3D3];
 }
 
-.signup-btn{
+.signup-btn {
   @apply w-full  py-[14px] mb-4;
 }
 
-.signup-btn-1:active{
-  @apply bg-[#6C6A6A] ;
+.signup-btn-1:active {
+  @apply bg-[#6C6A6A];
 }
 
-.signup-btn-2:active{
-  @apply border-[2px] border-solid border-[#6C6A6A] ;
+.signup-btn-2:active {
+  @apply border-[2px] border-solid border-[#6C6A6A];
 }
 </style>

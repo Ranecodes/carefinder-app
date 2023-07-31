@@ -78,7 +78,7 @@
           type="submit"
           class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]"
         >
-          Search
+        <NavItem link="/search">Search</NavItem>
         </button>
       </form>
     </div>
@@ -221,13 +221,13 @@
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
+import NavItem from '../components/navbar/NavItem.vue';
 
 
 
 export default {
-  layout: "default",
- 
+    layout: "default",
+    components: { NavItem }
 };
 </script>
 
