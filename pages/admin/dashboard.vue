@@ -4,6 +4,7 @@
     <div>
         <h1>Welcome User</h1>
         <p>Email: {{ user?.email }}</p>
+        <br>
         <button @click="logout" class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]">Log out</button>
     </div>
 </template>
