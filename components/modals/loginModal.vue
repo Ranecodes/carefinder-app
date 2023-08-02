@@ -175,6 +175,7 @@
         </div>
 
         <div class="form-group">
+          <div v-if="errorMsg" class="error-message">{{ errorMsg }}</div>
           <button
             class="signup-btn signup-btn-1 bg-[#1836B2] text-white"
             type="submit"
