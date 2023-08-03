@@ -2,7 +2,7 @@
   <div>
     <Navbar @openSignUpModal="showModalSignUp = true" @openLoginModal="showModalLogin = true " />
     <SignUpModal v-if="showModalSignUp" @close="showModalSignUp = false" />
-    <LoginModal v-if="showModalLogin" @close="showModalLogin = false" @loginSuccess="handleLoginSuccess" />
+    <LoginModal v-if="showModalLogin" @close="showModalLogin = false" :visible="showModalLogin" @loginSuccess="handleLoginSuccess" />
     <slot />
     
   </div>
