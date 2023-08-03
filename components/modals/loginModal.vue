@@ -175,7 +175,7 @@
         </div>
 
         <div class="form-group">
-          <div v-if="errorMsg" class="error-message">{{ errorMsg }}</div>
+          <div v-if="errorMsg" class="error-message text-red-600">{{ errorMsg }}</div>
           <button
             class="signup-btn signup-btn-1 bg-[#1836B2] text-white"
             type="submit"
@@ -252,6 +252,8 @@ const showModalSignUp = ref(false);
 const openSignUpModal = () => {
   showModalSignUp.value = true;
 };
+
+
 
 async function signIn() {
   try {
