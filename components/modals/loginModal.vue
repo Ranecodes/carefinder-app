@@ -240,12 +240,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import SignUpModal from "./signUpModal.vue";
-import { defineProps, defineEmits } from "nuxt/dist/app/compat/capi";
+
 
 const client = useSupabaseAuthClient();
 const router = useRouter();
-const {visible} = defineProps(['visible']);
-const {emit} = defineEmits(['loginSuccess']);
+
 
 const email = ref("");
 const password = ref("");
@@ -265,7 +264,6 @@ async function signIn() {
       password: password.value,
     });
     if (error) throw error;
-    emit('loginSuccess');
     router.push("/admin/dashboard");
   } catch (error) {
     errorMsg.value = "Incorrect email or password";
