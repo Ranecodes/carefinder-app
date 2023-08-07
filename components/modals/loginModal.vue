@@ -242,6 +242,7 @@ import { ref } from "vue";
 import SignUpModal from "./signUpModal.vue";
 
 
+
 const client = useSupabaseAuthClient();
 const router = useRouter();
 
@@ -269,6 +270,7 @@ async function signIn() {
     errorMsg.value = "Incorrect email or password";
   }
 }
+
 </script>
 
 <style>
