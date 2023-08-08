@@ -1,7 +1,7 @@
 <template>
     <div class="signup-container">
       <div>
-        <div class="logo-wrapper ml-[42px] mt-[45px]">
+        <div class="logo-wrapper ml-[35px] mt-[35px]">
             <nuxt-img src="Logo.png" alt="logo" />
         </div>
         <form class="signup-content" @submit.prevent="signUp">
@@ -48,12 +48,13 @@
             <label for="password">Password:</label>
             <div class="input">
               <svg
-                class="absolute top-[50%] right-[10px] cursor-pointer"
+                class="absolute top-[60px] right-[20px] cursor-pointer"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                @click="togglePasswordVisibility"
               >
                 <g clip-path="url(#clip0_364_243)">
                   <path
@@ -78,7 +79,7 @@
                 </defs>
               </svg>
               <input
-                type="password"
+              :type="showPassword ? 'text' : 'password'"
                 id="password"
                 v-model="password"
                 placeholder="Enter your password"
@@ -147,7 +148,7 @@
         <h2 class="pt-[96px] pb-[76px] text-[13px] text-[#666666] font-bold text-center">By creating account you agree to our <span class="text-[#001FC0]">Terms of Service</span> and <span class="text-[#001FC0]">Privacy Policy</span>  </h2>
       </div>
       <div class="image-container">
-        <nuxt-img src="signup.png" alt="surgeons operating" />
+        <nuxt-img class="max-w-fit" src="signup.png" alt="surgeons operating" />
       </div>
     </div>
 </template>
@@ -165,6 +166,7 @@ const password = ref("");
 const errorMsg = ref("");
 const successMsg = ref("");
 
+const showPassword = ref(false);
 
 
 
@@ -182,6 +184,10 @@ async function signUp() {
       errorMsg.value = "Error signing up";
     }
   }
+
+function togglePasswordVisibility() {
+  showPassword.value = !showPassword.value;
+}
 
 </script>
 
@@ -201,11 +207,11 @@ async function signUp() {
 }
 
 .form-text{
-    @apply pt-[95px];
+    @apply pt-[30px];
 }
 
 .form-group {
-  @apply pt-[32px] text-[15px];
+  @apply pt-[25px] text-[15px];
 }
 
 .form-group label {
