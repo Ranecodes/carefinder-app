@@ -32,7 +32,7 @@
           </div>
           <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" required placeholder="Enter your name" />
+            <input type="text" id="name" v-model="name" required placeholder="Enter your name" />
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
@@ -161,6 +161,7 @@ import { ref } from "vue";
 
 
 const client = useSupabaseAuthClient();
+const name = ref("");
 const email = ref("");
 const password = ref("");
 const errorMsg = ref("");
@@ -178,6 +179,8 @@ async function signUp() {
       password: password.value,
     });
     if (error) throw error;
+    await client.auth.updateUser({ data: { name: name.value } });
+
     successMsg.value = "Check your email for confirmation";
     }
     catch (error) {

@@ -1,12 +1,15 @@
 <template>
-    <div><h1>Dashboard</h1></div>
-
-    <div>
-        <h1>Welcome User</h1>
+    <div class="welcome-text-container">
+        <h1 class="welcome-text">Welcome Raneh Egbe!</h1>
         <p>Email: {{ user?.email }}</p>
-        <br>
-        <button @click="logout" class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]">Log out</button>
     </div>
+
+    <div class="nav-section">
+        <button class="nav-section-btn">Dashboard</button>
+        <button class="nav-section-btn pl-[36px]">Entries</button>
+        <!-- <button @click="logout" class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]">Log out</button> -->
+    </div>
+    <hr class="w-11/12 h-[2px] ml-[40px] bg-[#000000]">
 </template>
 
 <script setup lang="ts">
@@ -29,3 +32,18 @@ async function logout() {
     }
 }
 </script>
+
+<style>
+.welcome-text-container{
+    @apply pt-[50px] pb-[60px] text-center;
+}
+.welcome-text{
+    @apply text-[32px] font-semibold;
+}
+.nav-section{
+    @apply flex pl-[60px] pb-[33px];
+}
+.nav-section-btn:focus{
+    @apply bg-[#001FC1] text-[#FFFFFF] font-semibold rounded py-[10px] px-[20px];
+}
+</style>
