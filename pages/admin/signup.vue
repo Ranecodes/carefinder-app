@@ -2,7 +2,7 @@
     <div class="signup-container">
       <div>
         <div class="logo-wrapper ml-[35px] mt-[35px]">
-            <nuxt-img src="Logo.png" alt="logo" />
+            <a href="/"><nuxt-img src="Logo.png" alt="logo" /></a>
         </div>
         <form class="signup-content" @submit.prevent="signUp">
           <div class="form-top">
@@ -148,7 +148,7 @@
         <h2 class="pt-[96px] pb-[76px] text-[13px] text-[#666666] font-bold text-center">By creating account you agree to our <span class="text-[#001FC0]">Terms of Service</span> and <span class="text-[#001FC0]">Privacy Policy</span>  </h2>
       </div>
       <div class="image-container">
-        <nuxt-img class="max-w-fit" src="signup.png" alt="surgeons operating" />
+        <nuxt-img  src="signup.png" alt="surgeons operating" />
       </div>
     </div>
 </template>

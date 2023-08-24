@@ -2,7 +2,7 @@
   <div class="signup-container">
     <div>
       <div class="logo-wrapper ml-[35px] mt-[35px]">
-        <nuxt-img src="Logo.png" alt="logo" />
+        <a href="/"><nuxt-img src="Logo.png" alt="logo" /></a>
       </div>
       <form class="signup-content" @submit.prevent="signIn">
         <div class="form-top">
