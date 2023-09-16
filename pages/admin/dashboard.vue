@@ -37,7 +37,6 @@ const router = useRouter();
 const client = useSupabaseAuthClient();
 const showEntries = ref(false);
 const showDashboard = ref(true);
-
 console.log(user.value);
 async function logout() {
   try {
