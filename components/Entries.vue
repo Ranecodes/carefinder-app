@@ -11,13 +11,9 @@
             <th>NAME</th>
             <th>LOCATION</th>
           </tr>
-          <tr>
-            <td>St. Luke's Medical Center</td>
-            <td>Quezon City</td>
-          </tr>
-          <tr>
-            <td>Hope Waddell Hospital</td>
-            <td>Calabar, Nigeria</td>
+          <tr v-for="hospital in hospitals" :key="hospital.name">
+            <td>{{ hospital.name }}</td>
+            <td>{{ hospital.location }}</td>
           </tr>
         </table>
       </div>
@@ -101,7 +97,7 @@
 </svg>
 
               </div>
-              <input type="file" name="image" id="image" class="image-upload-input" multiple/>
+              <input type="file" name="image" id="image" class="image-upload-input" />
             </div>
           </div>
           <button @click="addHospital">Add Hospital</button>
@@ -116,13 +112,14 @@
 <script setup>
 import { ref } from "vue";
 
-const showForm = ref(false); 
+
+const showForm = ref(false);
 const name = ref("");
 const city = ref("");
-const state= ref("");
+const state = ref("");
 
 const hospitals = ref([
-  { name: "St. Luke's Medical Center", location: "Quezon City" },
+  { name: "St. Luke's Medical Center", location: "New City" },
   { name: "Hope Waddell Hospital", location: "Calabar, Nigeria" }
 ]);
 
@@ -136,15 +133,15 @@ const addHospital = () => {
       name: name.value,
       location: `${city.value}, ${state.value}`
     });
-    name.value = "";
-    city.value = "";
-    state.value = "";
-    toggleForm();
-  } else {
-    alert("Please fill all fields");
+    clearForm();
   }
-}
+};
 
+const clearForm = () => {
+  name.value = "";
+  city.value = "";
+  state.value = "";
+};
 </script>
 
 <style scoped>
@@ -222,9 +219,9 @@ const addHospital = () => {
 }
 
 /* Hide the input element */
-.image-upload-input {
+/* .image-upload-input {
   display: none;
-}
+} */
 .close-btn{
   @apply bg-teal-500 text-white py-2 px-4 rounded mt-4 self-end;
 }
