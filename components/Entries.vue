@@ -48,6 +48,7 @@
               <label for="name">Name</label>
               <input
                 type="text"
+                v-model="name"
                 name="name"
                 id="name"
                 placeholder="Enter name of hospital"
@@ -55,6 +56,7 @@
               <label for="state">State</label>
               <input
                 type="text"
+                v-model="state"
                 name="state"
                 id="state"
                 placeholder="Enter state of hospital"
@@ -62,6 +64,7 @@
               <label for="city">City</label>
               <input
                 type="text"
+                v-model="city"
                 name="city"
                 id="city"
                 placeholder="Enter city of hospital"
@@ -100,7 +103,7 @@
               <input type="file" name="image" id="image" class="image-upload-input" />
             </div>
           </div>
-          <button @click="addHospital">Add Hospital</button>
+          <button @click.prevent="addHospital">Add Hospital</button>
         </form>
       </div>
 
@@ -120,7 +123,8 @@ const state = ref("");
 
 const hospitals = ref([
   { name: "St. Luke's Medical Center", location: "New City" },
-  { name: "Hope Waddell Hospital", location: "Calabar, Nigeria" }
+  { name: "Hope Waddell Hospital", location: "Calabar, Nigeria" },
+  { name: "St. Nicholas Hospital", location: "Lagos, Nigeria"}
 ]);
 
 const toggleForm = () => {
@@ -128,14 +132,21 @@ const toggleForm = () => {
 };
 
 const addHospital = () => {
+  console.log('Add hospital button clicked');
+  console.log('Name:', name.value);
+  console.log('City:', city.value);
+  console.log('State:', state.value);
   if (name.value && city.value && state.value) {
     hospitals.value.push({
       name: name.value,
       location: `${city.value}, ${state.value}`
     });
+    console.log("Hospital added:", hospitals.value);
     clearForm();
+    
   }
 };
+
 
 const clearForm = () => {
   name.value = "";
