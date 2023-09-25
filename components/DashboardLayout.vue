@@ -2,7 +2,7 @@
     <div class="dashboard-container">
         <div class="entries-card entries-card-1">
             <h1>Number of Entries</h1>
-            <p>000</p>
+            <p>0</p>
         </div>
         <div class="entries-card entries-card-2">
             <h1>Number of Entries</h1>
@@ -13,8 +13,10 @@
 </template>
 
 <script lang="ts">
+
 export default {
     name: "DashboardLayout",
+
 };
 </script>
 

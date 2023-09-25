@@ -113,46 +113,44 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 
+import { ref, onMounted } from "vue";
+
+// Load existing hospitals from local storage on component mount
+const existingHospitals = JSON.parse(localStorage.getItem("hospitals")) || [];
+const hospitals = ref(existingHospitals);
 
 const showForm = ref(false);
 const name = ref("");
 const city = ref("");
 const state = ref("");
 
-const hospitals = ref([
-  { name: "St. Luke's Medical Center", location: "New City" },
-  { name: "Hope Waddell Hospital", location: "Calabar, Nigeria" },
-  { name: "St. Nicholas Hospital", location: "Lagos, Nigeria"}
-]);
-
 const toggleForm = () => {
   showForm.value = !showForm.value;
 };
 
 const addHospital = () => {
-  console.log('Add hospital button clicked');
-  console.log('Name:', name.value);
-  console.log('City:', city.value);
-  console.log('State:', state.value);
   if (name.value && city.value && state.value) {
-    hospitals.value.push({
+    const hospital = {
       name: name.value,
-      location: `${city.value}, ${state.value}`
-    });
-    console.log("Hospital added:", hospitals.value);
+      location: `${city.value}, ${state.value}`,
+    };
+
+    // Update both local storage and hospitals ref
+    hospitals.value.push(hospital);
+    localStorage.setItem("hospitals", JSON.stringify(hospitals.value));
+
     clearForm();
-    
   }
 };
-
 
 const clearForm = () => {
   name.value = "";
   city.value = "";
   state.value = "";
 };
+
+
 </script>
 
 <style scoped>
