@@ -1,76 +1,43 @@
 <template>
-  <div class="body">
-    <div class="welcome-text-container">
-      <h1 class="welcome-text">Welcome Username!</h1>
-      <p>Email: {{ user?.email }}</p>
-    </div>
-
-    <div class="nav-section">
-      <button
-        class="nav-section-btn"
-        @click="
-          showDashboard = true;
-          showEntries = false;
-        "
-        autofocus
-      >
-        Dashboard
-      </button>
-      <button class="nav-section-btn" @click="navigateToEntries">
-        Entries
-      </button>
-      <!-- <button @click="logout" class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]">Log out</button> -->
-    </div>
-    <hr class="w-11/12 h-[1px] ml-[40px] bg-[#000000]" />
-    <Entries v-if="showEntries" />
-    <DashboardLayout v-if="showDashboard" />
+  <DashboardLayout1/>
+  <div class="dashboard-container">
+      <div class="entries-card entries-card-1">
+          <h1>Number of Entries</h1>
+          <p>0</p>
+      </div>
+      <div class="entries-card entries-card-2">
+          <h1>Number of Entries</h1>
+          <p>000</p>
+      </div>
   </div>
+  <Footer/>
 </template>
 
-<script setup lang="ts">
-definePageMeta({
-  middleware: ["auth"],
-});
+<script lang="ts">
 
-const user = useSupabaseUser();
-const router = useRouter();
-const client = useSupabaseAuthClient();
-const showEntries = ref(false);
-const showDashboard = ref(true);
-console.log(user.value);
-async function logout() {
-  try {
-    const { error } = await client.auth.signOut();
-    if (error) throw error;
-    router.push("/");
-  } catch (error) {
-    console.log(error);
-  }
-}
+export default {
+  name: "DashboardLayout",
 
-function navigateToEntries() {
-  showEntries.value = true;
-  showDashboard.value = false;
-}
+};
 </script>
 
 <style>
-.body {
-  font-family: "Poppins", sans-serif;
+.dashboard-container{
+  @apply flex justify-between;
+  @apply w-[80%] mx-auto;
+  @apply mt-[50px] pb-10;
 }
-.welcome-text-container {
-  @apply pt-[50px] pb-[60px] text-center;
+.entries-card{
+  @apply bg-[#00BABA] text-[#FFF] rounded-[3px] w-[45%] h-[200px] flex flex-col justify-center items-center;
+  @apply shadow-xl;
 }
-.welcome-text {
-  @apply text-[32px] font-semibold;
+.entries-card:hover{
+  @apply bg-[#70d3d3] cursor-pointer ;
 }
-.nav-section {
-  @apply flex pl-[56px] mb-[25px];
+.entries-card h1{
+  @apply text-[20px] font-bold 
 }
-.nav-section-btn {
-  @apply px-[20px] py-[10px];
-}
-.nav-section-btn:focus {
-  @apply bg-[#001FC1] text-[#FFFFFF] font-semibold rounded px-[20px] py-[10px]  outline-none;
+.entries-card p{
+  @apply text-[50px] mt-[30px] font-bold;
 }
 </style>
