@@ -165,7 +165,7 @@ const addHospital = async () => {
       phone: phone.value,
       email: email.value,
       address: address.value,
-      images: imageFiles.value,
+      images: imageFiles.value && imageFiles.value.length > 0 ? imageFiles.value[0] : null,
     };
     const {data, error} = await supabase.from('hospitals').upsert([newHospital]);
     if (error) {
