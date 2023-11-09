@@ -152,9 +152,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { useSupabaseClient } from "supabase";
-
-const supabase = useSupabaseClient();
+const supabase = useSupabaseClient(); // eslint-disable-line
 const router = useRouter();
 
 const email = ref("");

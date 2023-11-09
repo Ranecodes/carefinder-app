@@ -131,7 +131,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
 // Load existing hospitals from local storage on component mount
 const existingHospitals = JSON.parse(localStorage.getItem("hospitals")) || [];

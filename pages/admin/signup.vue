@@ -163,7 +163,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-const client = useSupabaseClient();
+const supabase = useSupabaseClient(); //eslint-disable-line
 const name = ref("");
 const email = ref("");
 const password = ref("");
@@ -174,12 +174,12 @@ const showPassword = ref(false);
 
 async function signUp() {
   try {
-    const { error } = await client.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email: email.value,
       password: password.value,
     });
     if (error) throw error;
-    await client.auth.updateUser({ data: { name: name.value } });
+    await supabase.auth.updateUser({ data: { name: name.value } });
 
     successMsg.value = "Check your email for confirmation";
   } catch (error) {
