@@ -15,20 +15,35 @@
       }"
     >
       <SwiperSlide class="slide">
-        <nuxt-img  src="full-scr-1.png" alt="doctor and patient smiling" />
-        <h1 class="slide-text absolute bottom-0">Connecting Patients <br> to Trusted Hospitals and <br>Quality Medical Services </h1>
+        <nuxt-img src="full-scr-1.png" alt="doctor and patient smiling" />
+        <h1 class="slide-text absolute bottom-0">
+          Connecting Patients <br />
+          to Trusted Hospitals and <br />Quality Medical Services
+        </h1>
       </SwiperSlide>
       <SwiperSlide class="slide">
-        <nuxt-img  src="full-scr-2.png" alt="surgeon" />
-        <h1 class="slide-text absolute bottom-0">Navigate The Path <br> to Wellness and <br> Health With Carefinder</h1>
+        <nuxt-img src="full-scr-2.png" alt="surgeon" />
+        <h1 class="slide-text absolute bottom-0">
+          Navigate The Path <br />
+          to Wellness and <br />
+          Health With Carefinder
+        </h1>
       </SwiperSlide>
       <SwiperSlide class="slide">
-        <nuxt-img loading="lazy" src="full-scr-3.png" alt=""/>
-        <h1 class="slide-text absolute bottom-0">Bringing Healthcare <br> Closer To Your <br> Fingertips </h1>
+        <nuxt-img loading="lazy" src="full-scr-3.png" alt="" />
+        <h1 class="slide-text absolute bottom-0">
+          Bringing Healthcare <br />
+          Closer To Your <br />
+          Fingertips
+        </h1>
       </SwiperSlide>
       <SwiperSlide class="slide">
         <nuxt-img loading="lazy" src="full-scr-4.png" alt="" />
-        <h1 class="slide-text absolute bottom-0">Unlocking Access to  <br> Life-saving Facilities <br> With Carefinder's Assistance</h1>
+        <h1 class="slide-text absolute bottom-0">
+          Unlocking Access to <br />
+          Life-saving Facilities <br />
+          With Carefinder's Assistance
+        </h1>
       </SwiperSlide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>
@@ -66,11 +81,11 @@ export default {
   @apply w-full max-w-full;
 }
 
-.slide{
+.slide {
   @apply relative;
 }
 
-.slide-text{
+.slide-text {
   @apply text-white text-[50px] font-semibold pl-[90px] pb-6;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;

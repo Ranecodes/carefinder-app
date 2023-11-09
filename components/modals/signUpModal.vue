@@ -249,24 +249,22 @@ const errorMsg = ref("");
 const successMsg = ref("");
 const showModalLogin = ref(false);
 
-
 const openLoginModal = () => {
   showModalLogin.value = true;
 };
 
 async function signUp() {
-  try{
-    const{data, error} = await client.auth.signUp({
+  try {
+    const { data, error } = await client.auth.signUp({
       email: email.value,
       password: password.value,
     });
     if (error) throw error;
     successMsg.value = "Check your email for confirmation";
-    }
-    catch (error) {
-      errorMsg.value = "Error signing up";
-    }
+  } catch (error) {
+    errorMsg.value = "Error signing up";
   }
+}
 </script>
 
 <style>
