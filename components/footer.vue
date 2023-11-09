@@ -1,5 +1,4 @@
 <template>
-  
   <div class="footer">
     <div class="footer-content p-[100px]">
       <div class="sm-links">
@@ -39,7 +38,7 @@
             </defs>
           </svg>
           <svg
-          class="ml-[10px]"
+            class="ml-[10px]"
             width="42"
             height="42"
             viewBox="0 0 42 42"
@@ -74,7 +73,7 @@
             </defs>
           </svg>
           <svg
-          class="ml-[10px]"
+            class="ml-[10px]"
             width="41"
             height="42"
             viewBox="0 0 41 42"
@@ -117,14 +116,14 @@
         </div>
       </div>
       <div class="links flex">
-        <div class="link flex flex-col ">
+        <div class="link flex flex-col">
           <h3 class="text-[18px] font-bold">Company</h3>
           <a href="#" class="pt-[45px]">About Us</a>
           <a href="#" class="pt-[17px]">Features</a>
           <a href="#" class="pt-[17px]">Testimonials</a>
         </div>
         <div class="link flex flex-col pl-48">
-          <h3 class="text-[18px] font-bold ">Contact</h3>
+          <h3 class="text-[18px] font-bold">Contact</h3>
           <a href="#" class="pt-[40px]">+12345658709</a>
           <a href="#" class="pt-[17px]">+55948392019</a>
           <a href="#" class="pt-[17px]">call@carefinder.com</a>
@@ -132,10 +131,20 @@
       </div>
     </div>
     <div class="footer-bottom">
-        <p class="pl-[150px] text-[#939393]">Website by <a href="https://github.com/Ranecodes" target="_blank" class="font-bold text-[#1D1D1D]">Ranecodes</a></p>
-        <p class="pr-[160px] text-[#939393]">© 2023 <span class="font-bold text-[#1D1D1D]">Carefinder</span> All Rights Reserved.</p>
+      <p class="pl-[150px] text-[#939393]">
+        Website by
+        <a
+          href="https://github.com/Ranecodes"
+          target="_blank"
+          class="font-bold text-[#1D1D1D]"
+          >Ranecodes</a
+        >
+      </p>
+      <p class="pr-[160px] text-[#939393]">
+        © 2023 <span class="font-bold text-[#1D1D1D]">Carefinder</span> All
+        Rights Reserved.
+      </p>
     </div>
-    
   </div>
 </template>
 
@@ -151,29 +160,29 @@ export default {
   @apply bg-[#F1F8FF] flex flex-col;
 }
 
-.footer-content{
-    @apply flex justify-between pl-[100px];
+.footer-content {
+  @apply flex justify-between pl-[100px];
 }
 
-.sm-links{
+.sm-links {
   @apply flex flex-col justify-center items-center;
 }
 
-.sm-icons svg:hover{
+.sm-icons svg:hover {
   @apply brightness-110;
 }
 
-.links{
-    @apply mr-[250px] pb-[25px];
+.links {
+  @apply mr-[250px] pb-[25px];
 }
 
-.link a{
-    @apply  text-[14px];
+.link a {
+  @apply text-[14px];
 }
-.link a:hover{
-    @apply text-[#001FC0];
+.link a:hover {
+  @apply text-[#001FC0];
 }
-.footer-bottom{
+.footer-bottom {
   @apply flex justify-between pb-10 text-[14px];
 }
 </style>

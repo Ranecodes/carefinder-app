@@ -175,7 +175,9 @@
         </div>
 
         <div class="form-group">
-          <div v-if="errorMsg" class="error-message text-red-600">{{ errorMsg }}</div>
+          <div v-if="errorMsg" class="error-message text-red-600">
+            {{ errorMsg }}
+          </div>
           <button
             class="signup-btn signup-btn-1 bg-[#1836B2] text-white"
             type="submit"
@@ -241,11 +243,8 @@
 import { ref } from "vue";
 import SignUpModal from "./signUpModal.vue";
 
-
-
 const client = useSupabaseAuthClient();
 const router = useRouter();
-
 
 const email = ref("");
 const password = ref("");
@@ -256,11 +255,9 @@ const openSignUpModal = () => {
   showModalSignUp.value = true;
 };
 
-
-
 async function signIn() {
   try {
-    const {error} = await client.auth.signInWithPassword({
+    const { error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });
@@ -270,7 +267,6 @@ async function signIn() {
     errorMsg.value = "Incorrect email or password";
   }
 }
-
 </script>
 
 <style>

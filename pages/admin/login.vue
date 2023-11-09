@@ -144,15 +144,15 @@
       </form>
     </div>
     <div class="image-container">
-      <nuxt-img  src="signup.png" alt="surgeons operating" />
+      <nuxt-img src="signup.png" alt="surgeons operating" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-
-const client = useSupabaseAuthClient();
+import { useRouter } from "vue-router";
+const supabase = useSupabaseClient(); // eslint-disable-line
 const router = useRouter();
 
 const email = ref("");
@@ -163,7 +163,7 @@ const showPassword = ref(false);
 
 async function signIn() {
   try {
-    const { error } = await client.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });

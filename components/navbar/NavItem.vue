@@ -1,14 +1,17 @@
 <template>
-    <li>
-      <NuxtLink :to="link" :isActive="isActive">
-        <slot v-if="$slots.default" />
-      </NuxtLink>
-    </li>
-  </template>
-  
+  <li>
+    <NuxtLink :to="link">
+      <slot />
+    </NuxtLink>
+  </li>
+</template>
+
 <script setup lang="ts">
- 
-  
-  const { link, isActive = false } = defineProps(['link', 'isActive']);
+defineProps({
+  link: {
+    type: String,
+    default: "/",
+    required: true,
+  },
+});
 </script>
-  

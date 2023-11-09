@@ -5,10 +5,9 @@
       :navigation="true"
       :slidesPerView="3"
       :spaceBetween="30"
-      
       :modules="modules"
     >
-      <SwiperSlide class="container  ">
+      <SwiperSlide class="container">
         <div class="card-container">
           <nuxt-img src="avatar1.png"></nuxt-img>
           <div class="card-name">
@@ -104,8 +103,8 @@
               specific criteria like specialties<br />
               and ratings. This helped me<br />
               find the perfect hospital that <br />met my needs. The app's
-              user-<br />friendly interface and accurate <br>information impressed
-              me!"
+              user-<br />friendly interface and accurate <br />information
+              impressed me!"
             </h3>
           </div>
         </div>
@@ -202,7 +201,13 @@
           </div>
           <div class="card-text">
             <h3>
-              "Carefinder has been a <br> lifesaver for me! I recently<br> moved to a new city and had<br> no idea where to find reliable <br>healthcare. With Carefinder, I <br>quickly discovered top-notch<br> hospitals and medical centers <br>in my area. Highly<br> recommended!"
+              "Carefinder has been a <br />
+              lifesaver for me! I recently<br />
+              moved to a new city and had<br />
+              no idea where to find reliable <br />healthcare. With Carefinder,
+              I <br />quickly discovered top-notch<br />
+              hospitals and medical centers <br />in my area. Highly<br />
+              recommended!"
             </h3>
           </div>
         </div>
@@ -286,12 +291,11 @@ export default {
 
 <style>
 .swipers {
-  @apply  m-10 font-[14px] h-[530px];
+  @apply m-10 font-[14px] h-[530px];
 }
 
-
 .container {
-  @apply bg-[#DEEEFF] flex flex-col items-center rounded-[3px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ;
+  @apply bg-[#DEEEFF] flex flex-col items-center rounded-[3px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)];
 }
 
 .card-container {
