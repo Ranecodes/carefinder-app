@@ -6,7 +6,7 @@
     </div>
     <div class="hero-section-image">
       <nuxt-img
-        class="h-auto w-11/12"
+        class="hero-section-image-og"
         src="heroimage1.png"
         alt="surgeon operating"
       />
@@ -237,6 +237,10 @@ export default {
 .hero-section-text {
   font-family: "Poppins", sans-serif;
   @apply text-6xl pr-[20px] font-bold leading-normal;
+}
+
+.hero-section-image-og {
+  @apply h-auto w-[683px];
 }
 
 .search-form {

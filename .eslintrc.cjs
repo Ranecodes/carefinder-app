@@ -16,6 +16,12 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "vue/multi-word-component-names": "off",
-    "vue/no-deprecate-slot-attribute": "off",
+    "vue/no-deprecated-slot-attribute": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   },
 };

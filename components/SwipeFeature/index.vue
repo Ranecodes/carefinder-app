@@ -15,14 +15,18 @@
       }"
     >
       <SwiperSlide class="slide">
-        <nuxt-img src="full-scr-1.png" alt="doctor and patient smiling" />
+        <nuxt-img
+          src="full-scr-1.png"
+          class="w-full"
+          alt="doctor and patient smiling"
+        />
         <h1 class="slide-text absolute bottom-0">
           Connecting Patients <br />
           to Trusted Hospitals and <br />Quality Medical Services
         </h1>
       </SwiperSlide>
       <SwiperSlide class="slide">
-        <nuxt-img src="full-scr-2.png" alt="surgeon" />
+        <nuxt-img src="full-scr-2.png" class="w-full" alt="surgeon" />
         <h1 class="slide-text absolute bottom-0">
           Navigate The Path <br />
           to Wellness and <br />
@@ -30,7 +34,7 @@
         </h1>
       </SwiperSlide>
       <SwiperSlide class="slide">
-        <nuxt-img loading="lazy" src="full-scr-3.png" alt="" />
+        <nuxt-img loading="lazy" src="full-scr-3.png" class="w-full" alt="" />
         <h1 class="slide-text absolute bottom-0">
           Bringing Healthcare <br />
           Closer To Your <br />
@@ -38,7 +42,7 @@
         </h1>
       </SwiperSlide>
       <SwiperSlide class="slide">
-        <nuxt-img loading="lazy" src="full-scr-4.png" alt="" />
+        <nuxt-img loading="lazy" src="full-scr-4.png" class="w-full" alt="" />
         <h1 class="slide-text absolute bottom-0">
           Unlocking Access to <br />
           Life-saving Facilities <br />
