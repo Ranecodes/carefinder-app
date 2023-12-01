@@ -2,7 +2,7 @@
   <div class="signup-container">
     <div>
       <div class="logo-wrapper ml-[35px] mt-[35px]">
-        <a href="/"><nuxt-img src="Logo.png" alt="logo" /></a>
+        <a href="/"><nuxt-img src="Logo.png" alt="logo" class="logo" /></a>
       </div>
       <form class="signup-content" @submit.prevent="signIn">
         <div class="form-top">
@@ -144,7 +144,7 @@
       </form>
     </div>
     <div class="image-container">
-      <nuxt-img src="signup.png" alt="surgeons operating" />
+      <nuxt-img src="signup.png" alt="surgeons operating" class="image" />
     </div>
   </div>
 </template>
@@ -180,6 +180,10 @@ function togglePasswordVisibility() {
 </script>
 
 <style>
+.logo {
+  @apply w-[150px];
+}
+
 .signup-container {
   font-family: "Poppins", sans-serif;
   @apply flex justify-between;
@@ -219,5 +223,9 @@ function togglePasswordVisibility() {
 
 .signup-btn-2:active {
   @apply border-[2px] border-solid border-[#6C6A6A];
+}
+
+.image {
+  @apply w-[683px];
 }
 </style>
