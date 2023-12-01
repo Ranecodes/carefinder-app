@@ -2,8 +2,8 @@
   <nav class="navbar flex items-center justify-between pt-10">
     <div class="logo pl-11 list-none">
       <NavItem link="/"
-        ><img src="~/assets/images/Logo.png" alt="logo"
-      /></NavItem>
+        ><nuxt-img src="Logo.png" alt="logo" class="logo-og" />
+      </NavItem>
     </div>
     <ul class="nav-list flex items-center space-x-4 text-base text-[#767676]">
       <div class="mid-nav flex space-x-16 pr-64 font-semibold">
@@ -63,6 +63,9 @@ const signup = () => {
 </script>
 
 <style scoped>
+.logo-og {
+  @apply w-[150px] max-w-none;
+}
 .btn-blue {
   @apply bg-[#001FC0] text-white py-4 px-9 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white;
 }
