@@ -139,7 +139,6 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useSupabaseClient } from "supabase";
 const hospitals = ref([]);
 const showForm = ref(false);
 const name = ref("");
@@ -150,6 +149,7 @@ const phone = ref("");
 const email = ref("");
 const imageFiles = ref([]);
 const address = ref("");
+// eslint-disable-next-line no-undef
 const supabase = useSupabaseClient();
 
 onMounted(async () => {
