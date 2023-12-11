@@ -1,93 +1,97 @@
 <template class="container">
-  <div class="hero-section relative bg-white p-4 flex pt-[89px]">
-    <div class="hero-section-text pl-[102px] pt-[60px]">
-      Our <span class="text-[#001FC0]">expertise</span> <br />
-      at your service
+  <div class="hero-section relative bg-white p-4 flex flex-col pt-[89px]">
+    <div class="hero-section-container flex flex-row">
+      <div class="hero-section-text pl-[102px] pt-[60px]">
+        Our <span class="text-[#001FC0]">expertise</span> <br />
+        at your service
+      </div>
+      <div class="hero-section-image">
+        <nuxt-img
+          class="hero-section-image-og"
+          src="heroimage1.png"
+          alt="surgeon operating"
+        />
+      </div>
     </div>
-    <div class="hero-section-image">
-      <nuxt-img
-        class="hero-section-image-og"
-        src="heroimage1.png"
-        alt="surgeon operating"
-      />
-    </div>
-  </div>
-  <div class="search-form-wrapper">
-    <div
-      class="search-form absolute bottom-1 bg-[#001fc00d] shadow-[0_4px_35px_0_rgba(0,0,0,0.05)]"
-    >
-      <h2 class="text-[28px] pb-[10px]">Find a hospital</h2>
-      <form class="flex items-center">
-        <div class="input-wrapper relative">
-          <svg
-            class="absolute left-[20px] top-[13px]"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_152_239)">
-              <path
-                d="M23.2001 23.2001L16.8001 16.8001M10.4 20.0001C9.13936 20.0001 7.89101 19.7517 6.72629 19.2693C5.56156 18.7868 4.50327 18.0797 3.61182 17.1883C2.72038 16.2968 2.01325 15.2385 1.53081 14.0738C1.04836 12.9091 0.800049 11.6607 0.800049 10.4C0.800049 9.13936 1.04836 7.89101 1.53081 6.72629C2.01325 5.56156 2.72038 4.50327 3.61182 3.61182C4.50327 2.72038 5.56156 2.01325 6.72629 1.53081C7.89101 1.04836 9.13936 0.800049 10.4 0.800049C12.9461 0.800049 15.3879 1.81147 17.1883 3.61182C18.9886 5.41217 20.0001 7.85397 20.0001 10.4C20.0001 12.9461 18.9886 15.3879 17.1883 17.1883C15.3879 18.9886 12.9461 20.0001 10.4 20.0001Z"
-                stroke="#001FC0"
-                stroke-width="1.6"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_152_239">
-                <rect width="24" height="24" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <input
-            type="text"
-            class="border rounded-[3px] pr-3 pl-14 py-[13px] w-[426px]"
-            placeholder="Hospital name"
-          />
-        </div>
-        <div class="input-wrapper-2 relative">
-          <svg
-            class="absolute right-[20px] top-[13px]"
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_153_242)">
-              <path
-                d="M26.1138 2.5075L26.2463 2.5L26.4088 2.51L26.5213 2.53L26.6751 2.57375L26.8088 2.63125L26.9338 2.7025L27.0463 2.78625L27.1488 2.88L27.2138 2.95375L27.3163 3.09875L27.3813 3.21875C27.4401 3.34375 27.4776 3.47625 27.4938 3.61375L27.5001 3.74625C27.5001 3.84 27.4901 3.9325 27.4701 4.02125L27.4263 4.175L19.2613 26.7712C19.1066 27.1082 18.8583 27.3937 18.5462 27.5937C18.234 27.7938 17.8709 27.9001 17.5001 27.9C17.1661 27.9011 16.8376 27.8156 16.5465 27.652C16.2553 27.4883 16.0115 27.2521 15.8388 26.9662L15.7576 26.8075L11.5676 18.43L3.2301 14.26C2.9216 14.1189 2.65555 13.8993 2.45856 13.6231C2.26158 13.3469 2.14055 13.0239 2.1076 12.6863L2.1001 12.5C2.1001 11.8 2.47635 11.16 3.15135 10.7875L3.32635 10.7L25.8476 2.5675L25.9801 2.53L26.1138 2.5075Z"
-                fill="#001FC0"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_153_242">
-                <rect width="30" height="30" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <input
-            type="text"
-            class="border rounded-[3px] ml-[21px] pl-[18px] pr-[50px] py-[13px] w-[380px]"
-            placeholder="Location Near: City or ZIP"
-          />
-        </div>
+    <div class="search-form-wrapper">
+      <div
+        class="search-form absolute bottom-1 bg-[#001fc00d] shadow-[0_4px_35px_0_rgba(0,0,0,0.05)]"
+      >
+        <h2 class="find-hospital-text text-[28px] pb-[10px]">
+          Find a hospital
+        </h2>
+        <form class="search-form-og flex items-center">
+          <div class="input-wrapper relative">
+            <svg
+              class="absolute left-[20px] top-[13px]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_152_239)">
+                <path
+                  d="M23.2001 23.2001L16.8001 16.8001M10.4 20.0001C9.13936 20.0001 7.89101 19.7517 6.72629 19.2693C5.56156 18.7868 4.50327 18.0797 3.61182 17.1883C2.72038 16.2968 2.01325 15.2385 1.53081 14.0738C1.04836 12.9091 0.800049 11.6607 0.800049 10.4C0.800049 9.13936 1.04836 7.89101 1.53081 6.72629C2.01325 5.56156 2.72038 4.50327 3.61182 3.61182C4.50327 2.72038 5.56156 2.01325 6.72629 1.53081C7.89101 1.04836 9.13936 0.800049 10.4 0.800049C12.9461 0.800049 15.3879 1.81147 17.1883 3.61182C18.9886 5.41217 20.0001 7.85397 20.0001 10.4C20.0001 12.9461 18.9886 15.3879 17.1883 17.1883C15.3879 18.9886 12.9461 20.0001 10.4 20.0001Z"
+                  stroke="#001FC0"
+                  stroke-width="1.6"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_152_239">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <input
+              type="text"
+              class="hospitalsearch-input border rounded-[3px] pr-3 pl-14 py-[13px] w-[426px]"
+              placeholder="Hospital name"
+            />
+          </div>
+          <div class="input-wrapper-2 relative">
+            <svg
+              class="absolute right-[20px] top-[13px]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_153_242)">
+                <path
+                  d="M26.1138 2.5075L26.2463 2.5L26.4088 2.51L26.5213 2.53L26.6751 2.57375L26.8088 2.63125L26.9338 2.7025L27.0463 2.78625L27.1488 2.88L27.2138 2.95375L27.3163 3.09875L27.3813 3.21875C27.4401 3.34375 27.4776 3.47625 27.4938 3.61375L27.5001 3.74625C27.5001 3.84 27.4901 3.9325 27.4701 4.02125L27.4263 4.175L19.2613 26.7712C19.1066 27.1082 18.8583 27.3937 18.5462 27.5937C18.234 27.7938 17.8709 27.9001 17.5001 27.9C17.1661 27.9011 16.8376 27.8156 16.5465 27.652C16.2553 27.4883 16.0115 27.2521 15.8388 26.9662L15.7576 26.8075L11.5676 18.43L3.2301 14.26C2.9216 14.1189 2.65555 13.8993 2.45856 13.6231C2.26158 13.3469 2.14055 13.0239 2.1076 12.6863L2.1001 12.5C2.1001 11.8 2.47635 11.16 3.15135 10.7875L3.32635 10.7L25.8476 2.5675L25.9801 2.53L26.1138 2.5075Z"
+                  fill="#001FC0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_153_242">
+                  <rect width="30" height="30" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <input
+              type="text"
+              class="hospitalsearch-input border rounded-[3px] ml-[21px] pl-[18px] pr-[50px] py-[13px] w-[380px]"
+              placeholder="Location Near: City or ZIP"
+            />
+          </div>
 
-        <button
-          type="submit"
-          class="bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]"
-        >
-          <NavItem link="/search" class="list-none">Search</NavItem>
-        </button>
-      </form>
+          <button
+            type="submit"
+            class="submit-btn bg-[#001FC0] text-white py-[13px] px-[60px] ml-[20px] rounded-[3px]"
+          >
+            <NavItem link="/search" class="list-none">Search</NavItem>
+          </button>
+        </form>
+      </div>
+      <button
+        type="submit"
+        class="view-btn px-[26px] py-[12px] bg-[#00BABA] rounded-[3px] text-[#ffff] hover:bg-[#4FCFCF]"
+      >
+        View All Hospitals
+      </button>
     </div>
-    <button
-      type="submit"
-      class="view-btn px-[26px] py-[12px] bg-[#00BABA] rounded-[3px] text-[#ffff] hover:bg-[#4FCFCF]"
-    >
-      View All Hospitals
-    </button>
   </div>
   <div class="mid-btm-section pt-[141px]">
     <SwipeFeature />
@@ -203,7 +207,7 @@
       <form action="">
         <input
           type="text"
-          class="border rounded-[3px] pr-3 pl-[22px] py-[13px] w-[426px] bg-[#F4F4F4] text-[20px]"
+          class="newsletter-form-input border rounded-[3px] pr-3 pl-[22px] py-[13px] w-[426px] bg-[#F4F4F4] text-[20px]"
           placeholder="Enter your email"
         />
         <button
@@ -245,7 +249,7 @@ export default {
 
 .search-form {
   font-family: "Poppins", sans-serif;
-  @apply py-6 px-[63px] left-[121px] bottom-[-138px] z-0 backdrop-blur-sm;
+  @apply py-6 px-[63px] left-[121px] bottom-[70px] z-0 backdrop-blur-sm;
 }
 
 .view-btn {
@@ -274,5 +278,98 @@ export default {
 .newsletter-section {
   font-family: "Poppins", sans-serif;
   @apply flex flex-col justify-center items-center pt-[113px] pb-[70px];
+}
+
+@media (max-width: 1024px) {
+  .hero-section-text {
+    @apply text-[2.75rem] pr-[20px] font-bold leading-normal;
+  }
+  .hospitalsearch-input {
+    @apply w-[270px];
+  }
+  .search-form {
+    @apply py-4 px-4 bottom-[68px];
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section-text {
+    @apply text-4xl pr-4 font-bold leading-normal;
+  }
+  .hospitalsearch-input {
+    @apply w-[100%];
+  }
+  .search-form {
+    @apply py-4 bottom-[50px] px-4;
+  }
+  .hero-section-image {
+    @apply mt-4;
+  }
+  .view-btn {
+    @apply ml-0 mt-4 text-lg;
+  }
+  .features-section {
+    @apply pt-8 pb-16;
+  }
+  .feature-card {
+    @apply flex-col;
+    @screen lg {
+      @apply flex;
+    }
+  }
+  .feat-card-text {
+    @apply pl-0 mt-4;
+  }
+  .feat-btn {
+    @apply mt-4;
+  }
+  .testimonial-section {
+    @apply pt-8 pb-8;
+  }
+  .newsletter-section {
+    @apply pt-8 pb-8;
+  }
+  .newsletter-form-wr {
+    @apply pb-8;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-section {
+    @apply pt-2 px-0;
+  }
+  .hero-section-text {
+    @apply absolute top-[50px] text-white text-[35px] pl-5;
+  }
+  .hero-section-container {
+    @apply flex-col-reverse relative;
+  }
+  .hero-section-image-og {
+    @apply h-[90vh] object-cover;
+  }
+  .search-form {
+    @apply left-0 bottom-[177px];
+  }
+  .search-form-og {
+    @apply flex-col items-stretch;
+  }
+  .find-hospital-text {
+    @apply hidden;
+  }
+  .hospitalsearch-input {
+    @apply ml-0 mt-1;
+  }
+  .submit-btn {
+    @apply ml-0 mt-1;
+  }
+  .view-btn {
+    @apply hidden;
+  }
+  .feature-card-container {
+    @apply flex-col;
+  }
+  .newsletter-form-input {
+    @apply w-[80%];
+  }
 }
 </style>

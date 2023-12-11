@@ -1,19 +1,46 @@
 <template>
-  <nav class="navbar flex items-center justify-between pt-10">
-    <div class="logo pl-11 list-none">
+  <nav class="navbar">
+    <div class="logo">
       <NavItem link="/"
         ><nuxt-img src="Logo.png" alt="logo" class="logo-og" />
       </NavItem>
+      <div class="dropdown">
+        <div class="toggle-nav" @click="toggleNav">
+          <svg
+            class="arrow-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 10L12 17L19 10"
+              stroke="#001FC0"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
-    <ul class="nav-list flex items-center space-x-4 text-base text-[#767676]">
-      <div class="mid-nav flex space-x-16 pr-64 font-semibold">
+    <div class="dropdown-content" v-if="isNavOpen">
+      <NavItem class="nav blue-text text-[#001FC0]" link="/#features"
+        >Features</NavItem
+      >
+      <NavItem class="nav" link="/#testimonials">Testimonials</NavItem>
+      <NavItem class="nav" link="/#contact">Contact Us</NavItem>
+    </div>
+    <ul class="nav-list" v-if="isNavOpen">
+      <div class="mid-nav">
         <NavItem class="nav blue-text text-[#001FC0]" link="/#features"
           >Features</NavItem
         >
         <NavItem class="nav" link="/#testimonials">Testimonials</NavItem>
         <NavItem class="nav" link="/#contact">Contact Us</NavItem>
       </div>
-      <div class="end-nav flex items-center space-x-7 pr-24 font-bold">
+      <div class="end-nav">
         <div class="admin-profile" v-if="isLoggedIn">
           <svg
             class="admin-icon"
@@ -56,9 +83,14 @@ import NavItem from "./NavItem.vue";
 import { ref } from "vue";
 
 const isLoggedIn = ref(false);
+const isNavOpen = ref(true);
 
 const signup = () => {
   isLoggedIn.value = true;
+};
+
+const toggleNav = () => {
+  isNavOpen.value = !isNavOpen.value;
 };
 </script>
 
@@ -66,10 +98,47 @@ const signup = () => {
 .logo-og {
   @apply w-[150px] max-w-none;
 }
+.logo {
+  @apply pl-11 list-none flex items-center;
+}
+
+.toggle-nav {
+  @apply pl-2.5 relative;
+}
+
+.dropdown {
+  @apply relative inline-block;
+}
+
+.dropdown-content {
+  @apply hidden absolute bg-white shadow-lg  py-2 px-0 z-10;
+  left: 0;
+  width: 100vw;
+  top: 100%;
+}
+
+.dropdown-content > * {
+  @apply block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  @apply block;
+}
+
 .btn-blue {
   @apply bg-[#001FC0] text-white py-4 px-9 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white;
 }
 
+.nav-list {
+  @apply flex items-center space-x-4 text-base text-[#767676];
+}
+.mid-nav {
+  @apply flex space-x-16 pr-64 font-semibold;
+}
+
+.end-nav {
+  @apply flex items-center space-x-7 pr-24 font-bold;
+}
 .nav {
   @apply relative;
 }
@@ -81,6 +150,7 @@ const signup = () => {
 }
 .navbar {
   font-family: "Poppins", sans-serif;
+  @apply flex items-center justify-between pt-10;
 }
 
 /* .admin-profile {
@@ -92,5 +162,37 @@ const signup = () => {
   height: 24px;
   fill: #111111;
   cursor: pointer;
+}
+@media (min-width: 1025px) {
+  .toggle-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .nav-list {
+    @apply pl-[200px] whitespace-nowrap;
+  }
+  .mid-nav {
+    @apply pr-12;
+  }
+  .end-nav {
+    @apply pr-4;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-list {
+    @apply hidden;
+  }
+  .toggle-nav {
+    @apply cursor-pointer;
+    margin-right: 16px;
+  }
+  .dropdown-content {
+    @apply block;
+    width: 100vw;
+    top: 10%;
+  }
 }
 </style>

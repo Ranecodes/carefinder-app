@@ -122,7 +122,7 @@
           <a href="#" class="pt-[17px]">Features</a>
           <a href="#" class="pt-[17px]">Testimonials</a>
         </div>
-        <div class="link flex flex-col pl-48">
+        <div class="contact link flex flex-col pl-48">
           <h3 class="text-[18px] font-bold">Contact</h3>
           <a href="#" class="pt-[40px]">+12345658709</a>
           <a href="#" class="pt-[17px]">+55948392019</a>
@@ -184,5 +184,32 @@ export default {
 }
 .footer-bottom {
   @apply flex justify-between pb-10 text-[14px];
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    @apply flex-col;
+  }
+  .footer-content {
+    @apply flex-col;
+  }
+  .sm-links {
+    @apply flex flex-col justify-center items-center;
+  }
+  .links {
+    @apply flex flex-col;
+  }
+  .link {
+    @apply flex flex-col;
+  }
+  .footer-bottom {
+    @apply flex flex-col;
+  }
+  .footer-bottom p {
+    @apply text-center;
+  }
+  .contact {
+    @apply pl-0;
+  }
 }
 </style>
