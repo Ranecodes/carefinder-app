@@ -339,16 +339,34 @@ export default {
     @apply pt-2 px-0;
   }
   .hero-section-text {
-    @apply absolute top-[50px] text-white text-[35px] pl-5;
+    @apply absolute top-[50px] text-white text-[35px] pl-16;
+    animation: slideUp 2s ease-in-out;
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   .hero-section-container {
     @apply flex-col-reverse relative;
   }
   .hero-section-image-og {
-    @apply h-[90vh] object-cover;
+    @apply h-[60vh] object-cover;
   }
   .search-form {
-    @apply left-0 bottom-[177px];
+    @apply left-0 bottom-[10%] ml-[40px] blur-none;
+    animation: slideRight 2s ease-in-out;
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
   .search-form-og {
     @apply flex-col items-stretch;

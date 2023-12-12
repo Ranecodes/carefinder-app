@@ -25,14 +25,14 @@
         </div>
       </div>
     </div>
-    <div class="dropdown-content" v-if="isNavOpen">
+    <div class="dropdown-content" v-if="isDesktopNavOpen">
       <NavItem class="nav blue-text text-[#001FC0]" link="/#features"
         >Features</NavItem
       >
       <NavItem class="nav" link="/#testimonials">Testimonials</NavItem>
       <NavItem class="nav" link="/#contact">Contact Us</NavItem>
     </div>
-    <ul class="nav-list" v-if="isNavOpen">
+    <ul class="nav-list" v-if="isDesktopNavOpen">
       <div class="mid-nav">
         <NavItem class="nav blue-text text-[#001FC0]" link="/#features"
           >Features</NavItem
@@ -75,6 +75,49 @@
         >
       </div>
     </ul>
+    <div class="hamburger" @click="toggleHamburger">
+      <svg
+        class="hamburger-icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 12H21"
+          stroke="#001FC0"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M3 6H21"
+          stroke="#001FC0"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M3 18H21"
+          stroke="#001FC0"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <div class="mobile-dropdown" v-if="isMobileNavOpen">
+      <NavItem
+        @click="signup"
+        class="btn-blue cursor-pointer"
+        link="/admin/signup"
+        >Sign Up</NavItem
+      >
+      <NavItem class="hover:text-[#001FC0] cursor-pointer" link="/admin/login"
+        >Login</NavItem
+      >
+    </div>
   </nav>
 </template>
 
@@ -83,14 +126,19 @@ import NavItem from "./NavItem.vue";
 import { ref } from "vue";
 
 const isLoggedIn = ref(false);
-const isNavOpen = ref(true);
+const isDesktopNavOpen = ref(true);
+const isMobileNavOpen = ref(false);
 
 const signup = () => {
   isLoggedIn.value = true;
 };
 
 const toggleNav = () => {
-  isNavOpen.value = !isNavOpen.value;
+  isDesktopNavOpen.value = !isDesktopNavOpen.value;
+};
+
+const toggleHamburger = () => {
+  isMobileNavOpen.value = !isMobileNavOpen.value;
 };
 </script>
 
@@ -163,6 +211,21 @@ const toggleNav = () => {
   fill: #111111;
   cursor: pointer;
 }
+.hamburger {
+  @apply hidden;
+}
+
+.mobile-dropdown {
+  @apply block absolute bg-white shadow-lg pt-10 pb-2 px-4 z-10;
+  width: 100vw;
+  top: 79px;
+  text-align: center;
+}
+
+.mobile-dropdown > * {
+  @apply block py-2 text-sm hover:bg-gray-100 cursor-pointer;
+}
+
 @media (min-width: 1025px) {
   .toggle-nav {
     display: none;
@@ -192,7 +255,19 @@ const toggleNav = () => {
   .dropdown-content {
     @apply block;
     width: 100vw;
-    top: 10%;
+    top: 70px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    @apply block pr-3;
+  }
+  .mobile-dropdown {
+    @apply block;
+  }
+  .logo {
+    @apply pl-6;
   }
 }
 </style>
