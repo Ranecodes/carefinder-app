@@ -1,10 +1,25 @@
 <template>
   <div class="swiper-container">
     <Swiper
-      class="swipers"
+      class="testimonial-swiper"
+      :breakpoints="{
+        // When screen width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        // When screen width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // When screen width is >= 1024px
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }"
       :navigation="true"
-      :slidesPerView="3"
-      :spaceBetween="30"
       :modules="modules"
     >
       <SwiperSlide class="container">
@@ -295,11 +310,12 @@ export default {
 }
 
 .container {
-  @apply bg-[#DEEEFF] flex flex-col items-center rounded-[3px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)];
+  @apply bg-[#DEEEFF] flex flex-col items-center rounded-[3px] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] 
+         h-[530px] overflow-hidden;
 }
 
 .card-container {
-  @apply mt-[45px];
+  @apply flex flex-col items-center justify-center h-full px-4;
 }
 
 .card-name {
@@ -320,6 +336,10 @@ export default {
 
 .card-text {
   @apply mt-[37px];
+}
+
+.card-text h3 {
+  @apply text-center;
 }
 
 .swiper-pagination {

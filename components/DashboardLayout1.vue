@@ -33,19 +33,26 @@
 </template>
 
 <script setup lang="ts">
+// eslint-disable-next-line no-undef
 definePageMeta({
   middleware: ["auth"],
 });
 
+// eslint-disable-next-line no-undef
 const user = useSupabaseUser();
+// eslint-disable-next-line no-undef
 const router = useRouter();
+// eslint-disable-next-line no-undef
 const client = useSupabaseAuthClient();
+// eslint-disable-next-line no-undef
 const showEntries = ref(false);
+// eslint-disable-next-line no-undef
 const showDashboard = ref(true);
 console.log(user.value);
 async function logout() {
   try {
     const { error } = await client.auth.signOut();
+    console.log(client);
     if (error) throw error;
     router.push("/");
   } catch (error) {
