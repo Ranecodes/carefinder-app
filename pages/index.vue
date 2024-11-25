@@ -100,9 +100,9 @@
     <h1 class="text-[48px] font-bold text-center pb-[49px] text-[#000000cc]">
       Features
     </h1>
-    <div class="feature-card-container flex justify-center">
+    <div class="feature-card-container">
       <div class="feature-card">
-        <div>
+        <div class="feature-svg-cont">
           <svg
             width="73"
             height="72"
@@ -129,7 +129,7 @@
           </svg>
         </div>
 
-        <div class="feat-card-text pl-3">
+        <div class="feat-card-text">
           <h6 class="font-bold">Hospital Search</h6>
           <p>
             Search for hospitals near <br />
@@ -138,8 +138,8 @@
           <button class="feat-btn">Search Now</button>
         </div>
       </div>
-      <div class="feature-card pl-[65px] pb-4">
-        <div>
+      <div class="feature-card">
+        <div class="feature-svg-cont">
           <svg
             width="80"
             height="80"
@@ -154,7 +154,7 @@
           </svg>
         </div>
 
-        <div class="feat-card-text pl-3">
+        <div class="feat-card-text">
           <h6 class="font-bold">Get a List</h6>
           <p>
             Ability to export list of <br />
@@ -163,21 +163,22 @@
           <button class="feat-btn">Check it out</button>
         </div>
       </div>
-      <div class="feature-card pl-[58px]">
-        <svg
-          width="69"
-          height="69"
-          viewBox="0 0 69 69"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M62.0547 4.24396L63.735 5.93582C66.0504 8.27001 65.7001 12.4079 62.9461 15.1779L28.2948 50.0675L17.068 54.2025C15.6583 54.7244 14.2856 54.0476 14.0065 52.697C13.9121 52.2071 13.9565 51.7003 14.1346 51.2346L18.3211 39.8332L52.8757 5.03828C55.6297 2.26822 59.7393 1.90978 62.0547 4.24396ZM26.7825 7.7137C27.1565 7.7137 27.5268 7.78787 27.8724 7.93198C28.2179 8.07609 28.5319 8.28731 28.7963 8.55359C29.0608 8.81987 29.2706 9.13598 29.4137 9.48389C29.5568 9.8318 29.6305 10.2047 29.6305 10.5813C29.6305 10.9578 29.5568 11.3307 29.4137 11.6786C29.2706 12.0265 29.0608 12.3426 28.7963 12.6089C28.5319 12.8752 28.2179 13.0864 27.8724 13.2305C27.5268 13.3746 27.1565 13.4488 26.7825 13.4488H15.3906C13.8799 13.4488 12.4311 14.053 11.3629 15.1286C10.2947 16.2041 9.69462 17.6629 9.69462 19.1839V53.5946C9.69462 55.1156 10.2947 56.5743 11.3629 57.6499C12.4311 58.7254 13.8799 59.3297 15.3906 59.3297H49.5663C51.077 59.3297 52.5258 58.7254 53.594 57.6499C54.6622 56.5743 55.2623 55.1156 55.2623 53.5946V42.1243C55.2623 41.3638 55.5624 40.6344 56.0965 40.0967C56.6306 39.5589 57.3549 39.2568 58.1103 39.2568C58.8656 39.2568 59.59 39.5589 60.1241 40.0967C60.6582 40.6344 60.9583 41.3638 60.9583 42.1243V53.5946C60.9583 56.6366 59.758 59.5541 57.6216 61.7052C55.4852 63.8563 52.5877 65.0648 49.5663 65.0648H15.3906C12.3693 65.0648 9.47167 63.8563 7.33527 61.7052C5.19887 59.5541 3.99866 56.6366 3.99866 53.5946V19.1839C3.99866 16.1418 5.19887 13.2243 7.33527 11.0733C9.47167 8.92217 12.3693 7.7137 15.3906 7.7137H26.7825Z"
-            fill="#111111"
-          />
-        </svg>
-
-        <div class="feat-card-text pl-3">
+      <div class="feature-card">
+        <div class="feature-svg-cont">
+          <svg
+            width="69"
+            height="69"
+            viewBox="0 0 69 69"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M62.0547 4.24396L63.735 5.93582C66.0504 8.27001 65.7001 12.4079 62.9461 15.1779L28.2948 50.0675L17.068 54.2025C15.6583 54.7244 14.2856 54.0476 14.0065 52.697C13.9121 52.2071 13.9565 51.7003 14.1346 51.2346L18.3211 39.8332L52.8757 5.03828C55.6297 2.26822 59.7393 1.90978 62.0547 4.24396ZM26.7825 7.7137C27.1565 7.7137 27.5268 7.78787 27.8724 7.93198C28.2179 8.07609 28.5319 8.28731 28.7963 8.55359C29.0608 8.81987 29.2706 9.13598 29.4137 9.48389C29.5568 9.8318 29.6305 10.2047 29.6305 10.5813C29.6305 10.9578 29.5568 11.3307 29.4137 11.6786C29.2706 12.0265 29.0608 12.3426 28.7963 12.6089C28.5319 12.8752 28.2179 13.0864 27.8724 13.2305C27.5268 13.3746 27.1565 13.4488 26.7825 13.4488H15.3906C13.8799 13.4488 12.4311 14.053 11.3629 15.1286C10.2947 16.2041 9.69462 17.6629 9.69462 19.1839V53.5946C9.69462 55.1156 10.2947 56.5743 11.3629 57.6499C12.4311 58.7254 13.8799 59.3297 15.3906 59.3297H49.5663C51.077 59.3297 52.5258 58.7254 53.594 57.6499C54.6622 56.5743 55.2623 55.1156 55.2623 53.5946V42.1243C55.2623 41.3638 55.5624 40.6344 56.0965 40.0967C56.6306 39.5589 57.3549 39.2568 58.1103 39.2568C58.8656 39.2568 59.59 39.5589 60.1241 40.0967C60.6582 40.6344 60.9583 41.3638 60.9583 42.1243V53.5946C60.9583 56.6366 59.758 59.5541 57.6216 61.7052C55.4852 63.8563 52.5877 65.0648 49.5663 65.0648H15.3906C12.3693 65.0648 9.47167 63.8563 7.33527 61.7052C5.19887 59.5541 3.99866 56.6366 3.99866 53.5946V19.1839C3.99866 16.1418 5.19887 13.2243 7.33527 11.0733C9.47167 8.92217 12.3693 7.7137 15.3906 7.7137H26.7825Z"
+              fill="#111111"
+            />
+          </svg>
+        </div>
+        <div class="feat-card-text">
           <h6 class="font-bold">Add Content</h6>
           <p>
             Edit and add hospitals to <br />
@@ -259,12 +260,20 @@ export default {
 
 .features-section {
   font-family: "Poppins", sans-serif;
-  @apply flex flex-col justify-center pt-[113px] pb-[210px];
+  @apply flex flex-col justify-center pt-[113px] pb-[210px] px-5;
 }
 
 .feature-card {
   font-family: "Poppins", sans-serif;
-  @apply flex;
+  @apply flex flex-row items-center text-left max-w-[350px] w-full;
+}
+
+.feature-card svg {
+  @apply mr-4;
+}
+
+.feature-card-container {
+  @apply flex justify-center gap-5 flex-nowrap;
 }
 
 .feat-btn {
@@ -316,6 +325,9 @@ export default {
     @screen lg {
       @apply flex;
     }
+  }
+  .feature-card-container {
+    @apply items-baseline whitespace-nowrap;
   }
   .feat-card-text {
     @apply pl-0 mt-4;
@@ -383,11 +395,35 @@ export default {
   .view-btn {
     @apply hidden;
   }
+  .feat-card-text {
+    @apply pl-3;
+  }
   .feature-card-container {
-    @apply flex-col;
+    @apply flex-row gap-12 flex-wrap;
+  }
+  .features-section h1 {
+    @apply text-[30px] pb-8;
+  }
+  .feature-svg-cont {
+    @apply w-[70px] h-[50px];
+  }
+  .testimonial-section h1 {
+    @apply text-[30px] pb-[10px];
   }
   .newsletter-form-input {
     @apply w-[80%];
+  }
+  .newsletter-text {
+    @apply flex flex-col items-center;
+  }
+  .newsletter-text h1 {
+    @apply text-[30px] pb-[10px];
+  }
+  .newsletter-text p {
+    @apply text-[20px] pb-[50px];
+  }
+  .newsletter-form-wr {
+    @apply text-center;
   }
 }
 </style>

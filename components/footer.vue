@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
-    <div class="footer-content p-[100px]">
-      <div class="sm-links">
-        <nuxt-img src="Logo.png" alt="logo" />
-        <div class="sm-icons flex cursor-pointer">
+    <div class="footer-content px-6 py-10 md:px-10 lg:px-20">
+      <div class="sm-links text-center md:text-left">
+        <nuxt-img src="Logo.png" alt="logo" class="mb-6" />
+        <div class="sm-icons flex justify-center md:justify-start space-x-4">
           <svg
             width="41"
             height="41"
@@ -115,23 +115,25 @@
           </svg>
         </div>
       </div>
-      <div class="links flex">
-        <div class="link flex flex-col">
+      <div class="links grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div class="link flex flex-col items-start">
           <h3 class="text-[18px] font-bold">Company</h3>
-          <a href="#" class="pt-[45px]">About Us</a>
-          <a href="#" class="pt-[17px]">Features</a>
-          <a href="#" class="pt-[17px]">Testimonials</a>
+          <a href="#" class="mt-4">About Us</a>
+          <a href="#" class="mt-2">Features</a>
+          <a href="#" class="mt-2">Testimonials</a>
         </div>
-        <div class="contact link flex flex-col pl-48">
+        <div class="contact link flex flex-col items-start">
           <h3 class="text-[18px] font-bold">Contact</h3>
-          <a href="#" class="pt-[40px]">+12345658709</a>
-          <a href="#" class="pt-[17px]">+55948392019</a>
-          <a href="#" class="pt-[17px]">call@carefinder.com</a>
+          <a href="#" class="mt-4">+12345658709</a>
+          <a href="#" class="mt-2">+55948392019</a>
+          <a href="#" class="mt-2">call@carefinder.com</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="pl-[150px] text-[#939393]">
+    <div
+      class="footer-bottom flex flex-col lg:flex-row justify-between items-center px-6 py-4 text-sm text-[#939393] space-y-4 lg:space-y-0"
+    >
+      <p class="text-center lg:text-left">
         Website by
         <a
           href="https://github.com/Ranecodes"
@@ -140,7 +142,7 @@
           >Ranecodes</a
         >
       </p>
-      <p class="pr-[160px] text-[#939393]">
+      <p class="text-center lg:text-right">
         © 2023 <span class="font-bold text-[#1D1D1D]">Carefinder</span> All
         Rights Reserved.
       </p>
@@ -161,11 +163,11 @@ export default {
 }
 
 .footer-content {
-  @apply flex justify-between pl-[100px];
+  @apply flex justify-between flex-wrap;
 }
 
 .sm-links {
-  @apply flex flex-col justify-center items-center;
+  @apply text-center;
 }
 
 .sm-icons svg:hover {
@@ -173,7 +175,7 @@ export default {
 }
 
 .links {
-  @apply mr-[250px] pb-[25px];
+  @apply grid grid-cols-1 gap-6;
 }
 
 .link a {
@@ -183,7 +185,7 @@ export default {
   @apply text-[#001FC0];
 }
 .footer-bottom {
-  @apply flex justify-between pb-10 text-[14px];
+  @apply text-center;
 }
 
 @media only screen and (max-width: 600px) {
